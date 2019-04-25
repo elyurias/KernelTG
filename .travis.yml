@@ -21,7 +21,8 @@ before_deploy:
 - popd
 deploy:
   provider: releases
-  api_key: c97cad91651923794ce4323e9c113c5e8d429ad6
+  api_key: ba963d36f857338939d9ea0de70c386c23c1b7a7
   file: build/ios/iphoneos/app.ipa
+  skip_cleanup: true
   on:
     repo: elyurias/KernelTG
