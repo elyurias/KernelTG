@@ -1,14 +1,14 @@
 os: osx
 language: generic
 before_script:
- - brew update 
- - brew install --HEAD usbmuxd 
- - brew unlink usbmuxd 
- - brew link usbmuxd 
- - brew install --HEAD libimobiledevice 
- - brew install ideviceinstaller 
- - brew install ios-deploy 
- - git clone https://github.com/flutter/flutter.git -b beta --depth 1 
+- brew update
+- brew install --HEAD usbmuxd
+- brew unlink usbmuxd
+- brew link usbmuxd
+- brew install --HEAD libimobiledevice
+- brew install ideviceinstaller
+- brew install ios-deploy
+- git clone https://github.com/flutter/flutter.git -b beta --depth 1
 script: "-flutter/bin/flutter build ios --debug --no-codesign"
 before_deploy:
 - pushd build/ios/iphoneos
@@ -21,8 +21,8 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: oun+j1SqvxO4nT03x+UPO9GbY2RDaLLHppJl9AJ91pPB2RYDLTwuw3Peqn9XpTQ1tyYDrjFx0k3hRk29YITRtaCBTgY1SWndsmMhgmpn/jRd7nEJ4uCOEB94xpTV7Prcu8DYIblpmY04l2dQm0vBOafRc/XDDahHmtLII1tXVrOaVr6Bu+gKwq5tkmjbxmhp/8lCkSx6feCVWHJG+7RKXgoaKSQq0Lj3sBdDS25ruaF0/QMGOVOwYckIPv6VCZc034zTK+VQrHfregmbV+8ECsJLF69gMo9ha5MaljS5QhAXNo/wKgHFFuC+YNUgiwQqbFsWxFHfipGUjdvCQEqa3E+Rtpx0Ohln4eHf5+vGZtoKPHfafv9vBctCnhpbakJ3/VppfpJxIRUK3hWtkZbl+R7nA68aqS8m3t1rEcddtN/CCBZRhAyDjlzR9VcgsS2SOAvhfY3j+2UnnQy+ey8qWYTzoz3lldnvMgdmkz1oRUKmwboRib0PVcRFHfvwkLStN+TTfsUgy/W2qtTUONnvVWWHqKcrrLMgFbsY57YM+yUUYGtOAGX61WqfpYzHUWrrGtjc9ngqADUGE1PfWOWc7KnrGg/qHXIDjA7ExIg03zghv7ScYtfYS+3Q1z9NwgxT3WWSuYs1mVHH7JKcjjbUmSQBtd/WXcJxTOawzHvkNOI=
+    secure: K2ihu0+3QvqBVrdam2DBeoL+3urMcT2D4yd3/LjdVtXs2QSIesdpjPPFHaFEXaGM0opWqKBx6TBjVbiIcV70QXAfjFC9BaPtnDFupdn8skXdJCYdk4c6ORJhviR4TEj0/R7KxavFhx0f6g2MMaChkmg+YrHlnC3LG337SSkqm6DrSONQ/2wSSU+GFq55f0OhtjIbgf9dcvLCTg5x4EqM8bBvxmJUAl10c1w/AAX3xUm2oDK6yyKkG9vxWWqWXfP/O0NAkt6Y53gLVA+jZKc1op4Nb9BBiAP6e3guf+XJTk8WY2YqPx9FX9sc6ucm/SQzVG/47+h/l/ODcy/MPsnW7uqODQcHJuqq1o4Zz8XwgzFzUO5lvK+M8iIK2tjzSB2PA0Z2YYuh8cq6GAhts3+uCAFmvWciJS6LVg/9wHA46KuIq+pC0k15X1IR1U5h7L6OfWlc6F3TjOkOF3zzm9gNmXOT9aFTp65waqTVA1ed4klAP+2w/J+QIKEFD8NGGa7lPwaIIJcNMFVFsXGG8kHktl9eQ8kxiwKtLXDJFLp3yjW+mcLZrzpTozlBzeT8krXaUKwcKD4i/9nox6frsFyHWHf/Jq4WoMwGD/ph9cV8bryf5d8lwV98VjW594LPQdPj5I/7NP5kYvwddmP+R8T5l/CfjeIUGjg4EyFqzOAE6IM=
   file: build/ios/iphoneos/app.ipa
-  skip_cleanup: true 
+  skip_cleanup: true
   on:
     repo: elyurias/KernelTG
